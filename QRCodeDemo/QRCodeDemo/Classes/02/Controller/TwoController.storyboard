@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="FIY-yk-Lgp">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--识别图片二维码-->
+        <scene sceneID="3IO-Wc-4Z7">
+            <objects>
+                <viewController title="识别图片二维码" id="FIY-yk-Lgp" customClass="TwoController" customModule="二维码综合案例" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Way-Gu-cw1"/>
+                        <viewControllerLayoutGuide type="bottom" id="lYM-nh-pnY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xyT-Z2-ULC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ewm.png" translatesAutoresizingMaskIntoConstraints="NO" id="Xlf-Fl-RK1">
+                                <rect key="frame" x="112" y="164" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="8II-0j-C81"/>
+                                    <constraint firstAttribute="width" constant="150" id="njB-e8-WCb"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WyJ-0b-Wbh">
+                                <rect key="frame" x="116" y="364" width="143" height="30"/>
+                                <state key="normal" title="识别二维码"/>
+                                <connections>
+                                    <action selector="showImage:" destination="FIY-yk-Lgp" eventType="touchUpInside" id="vAD-rI-oGf"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="WyJ-0b-Wbh" secondAttribute="trailing" constant="100" id="04h-5I-XRI"/>
+                            <constraint firstItem="WyJ-0b-Wbh" firstAttribute="top" secondItem="Xlf-Fl-RK1" secondAttribute="bottom" constant="50" id="Epg-Nh-eeX"/>
+                            <constraint firstItem="WyJ-0b-Wbh" firstAttribute="leading" secondItem="xyT-Z2-ULC" secondAttribute="leadingMargin" constant="100" id="UiO-4T-nfA"/>
+                            <constraint firstItem="Xlf-Fl-RK1" firstAttribute="centerX" secondItem="xyT-Z2-ULC" secondAttribute="centerX" id="pSd-3L-kFd"/>
+                            <constraint firstItem="Xlf-Fl-RK1" firstAttribute="top" secondItem="Way-Gu-cw1" secondAttribute="bottom" constant="100" id="smw-vS-qAN"/>
+                        </constraints>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="sourceImage" destination="Xlf-Fl-RK1" id="YOM-Zk-hGy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="C4y-ff-bB9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1887" y="398"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ewm.png" width="576" height="375"/>
+    </resources>
+</document>
